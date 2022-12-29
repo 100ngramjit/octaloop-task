@@ -6,11 +6,15 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import { Avatar } from "@mui/material";
 import logo from "../assets/logo.png";
-
+import icon1 from "../assets/item1.png";
+import icon2 from "../assets/item2.png";
+import icon3 from "../assets/item3.png";
+import icon4 from "../assets/item4.png";
+import icon5 from "../assets/item5.png";
+import icon6 from "../assets/item6.png";
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -38,7 +42,6 @@ const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
   width: drawerWidth,
-  flexShrink: 0,
   whiteSpace: "nowrap",
   boxSizing: "border-box",
   ...(open && {
@@ -55,50 +58,148 @@ const DashboardSidebar = () => {
   return (
     <Box sx={{ display: "flex" }}>
       <Drawer variant="permanent">
-        <List>
-          <ListItem disablePadding sx={{ display: "block" }}>
-            <ListItemButton
-              sx={{
-                minHeight: 48,
-                px: 2.5,
-              }}
-            >
-              <ListItemIcon
+        <Box sx={{ justifyContent: "space-between" }}>
+          <List>
+            <ListItem disablePadding sx={{ display: "block" }}>
+              <ListItemButton
                 sx={{
-                  minWidth: 0,
-                  justifyContent: "center",
+                  minHeight: 48,
+                  px: 2.5,
                 }}
               >
-                <Avatar
-                  alt="logo"
-                  src={logo}
-                  style={{ width: 24, height: 24 }}
-                />
-              </ListItemIcon>
-              <ListItemText primary="abs" sx={{ opacity: 0 }} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding sx={{ display: "block" }}>
-            <ListItemButton
-              sx={{
-                minHeight: 48,
-                justifyContent: "center",
-                px: 2.5,
-              }}
-            >
-              <ListItemIcon
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    justifyContent: "center",
+                  }}
+                >
+                  <Avatar
+                    alt="logo"
+                    src={logo}
+                    style={{ width: 30, height: 30, my: 2 }}
+                  />
+                </ListItemIcon>
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding sx={{ display: "block" }}>
+              <ListItemButton
                 sx={{
-                  minWidth: 0,
-                  mr: "auto",
+                  minHeight: 48,
                   justifyContent: "center",
+                  px: 2.5,
                 }}
               >
-                <MailIcon />
-              </ListItemIcon>
-              <ListItemText sx={{ opacity: 0 }} />
-            </ListItemButton>
-          </ListItem>
-        </List>
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: "auto",
+                    justifyContent: "center",
+                  }}
+                >
+                  <img
+                    alt="icon2"
+                    src={icon2}
+                    style={{ width: 35, height: 50, my: 2 }}
+                  />
+                </ListItemIcon>
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding sx={{ display: "block" }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: "center",
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: "auto",
+                    justifyContent: "center",
+                  }}
+                >
+                  <img
+                    alt="icon3"
+                    src={icon3}
+                    style={{ width: 35, height: 50, my: 2 }}
+                  />
+                </ListItemIcon>
+              </ListItemButton>
+            </ListItem>{" "}
+            <ListItem disablePadding sx={{ display: "block" }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: "center",
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: "auto",
+                    justifyContent: "center",
+                  }}
+                >
+                  <img
+                    alt="icon4"
+                    src={icon4}
+                    style={{ width: 35, height: 50, my: 2 }}
+                  />
+                </ListItemIcon>
+              </ListItemButton>
+            </ListItem>{" "}
+            <ListItem disablePadding sx={{ display: "block" }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: "center",
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: "auto",
+                    justifyContent: "center",
+                  }}
+                >
+                  <img
+                    alt="icon5"
+                    src={icon5}
+                    style={{ width: 35, height: 50, my: 2 }}
+                  />
+                </ListItemIcon>
+              </ListItemButton>
+            </ListItem>{" "}
+          </List>
+          <List>
+            <ListItem disablePadding sx={{ display: "block", mt: 30 }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: "center",
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: "auto",
+                    justifyContent: "center",
+                  }}
+                >
+                  <img
+                    alt="icon6"
+                    src={icon6}
+                    style={{ width: 35, height: 50, my: 2 }}
+                  />
+                </ListItemIcon>
+              </ListItemButton>
+            </ListItem>
+          </List>
+        </Box>
       </Drawer>
     </Box>
   );
