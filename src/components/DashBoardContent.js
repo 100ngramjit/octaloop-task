@@ -1,6 +1,14 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import { Box, Grid, Typography, Paper } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Typography,
+  Paper,
+  CardHeader,
+  Avatar,
+  IconButton,
+} from "@mui/material";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -30,12 +38,46 @@ const DashBoardContent = () => {
             >
               <Grid item xs={12}>
                 <Item elevation={0} variant="outlined" sx={{ height: "322px" }}>
-                  1
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      p: 1,
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{ fontWeight: 600, pt: 0 }}
+                      color="text.primary"
+                    >
+                      Contractor Profile
+                    </Typography>
+                    <Typography variant="subtitle1" color="secondary">
+                      Manage
+                    </Typography>
+                  </Box>
                 </Item>
               </Grid>
               <Grid item xs={12}>
                 <Item elevation={0} variant="outlined" sx={{ height: "160px" }}>
-                  1
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      p: 1,
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{ fontWeight: 600, pt: 0 }}
+                      color="text.primary"
+                    >
+                      Address Location
+                    </Typography>
+                    <Typography variant="subtitle1" color="secondary">
+                      Manage
+                    </Typography>
+                  </Box>
                 </Item>
               </Grid>
             </Grid>
@@ -48,22 +90,81 @@ const DashBoardContent = () => {
             >
               <Grid item xs={12}>
                 <Item elevation={0} variant="outlined" sx={{ height: "29vh" }}>
-                  1
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      p: 1,
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{ fontWeight: 600, pt: 0 }}
+                      color="text.primary"
+                    >
+                      Tax Identification (ID)
+                    </Typography>
+                    <Typography variant="subtitle1" color="secondary">
+                      Manage
+                    </Typography>
+                  </Box>
                 </Item>
               </Grid>
               <Grid item xs={12}>
                 <Item elevation={0} variant="outlined" sx={{ height: "21vh" }}>
-                  1
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      p: 1,
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{ fontWeight: 600, pt: 0 }}
+                      color="text.primary"
+                    >
+                      GSTIN
+                    </Typography>
+                  </Box>
                 </Item>
               </Grid>{" "}
               <Grid item xs={12}>
                 <Item elevation={0} variant="outlined" sx={{ height: "15vh" }}>
-                  1
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      p: 1,
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{ fontWeight: 600, pt: 0 }}
+                      color="text.primary"
+                    >
+                      W-8BEN
+                    </Typography>
+                  </Box>
                 </Item>
               </Grid>{" "}
               <Grid item xs={12}>
                 <Item elevation={0} variant="outlined" sx={{ height: "15vh" }}>
-                  1
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      p: 1,
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{ fontWeight: 600, pt: 0 }}
+                      color="text.primary"
+                    >
+                      W-9
+                    </Typography>
+                  </Box>
                 </Item>
               </Grid>
             </Grid>
