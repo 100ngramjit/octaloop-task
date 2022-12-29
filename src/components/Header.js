@@ -1,30 +1,65 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import { grey, lime } from "@mui/material/colors";
+import { Box, Button, Toolbar, Typography } from "@mui/material";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 
 export default function Header() {
-  const backColor = grey[900];
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Toolbar>
-        <Typography variant="h5" color="primary" sx={{ mr: 2 }}>
+    <Box>
+      <Toolbar component="div" sx={{ justifyContent: "space-between" }}>
+        <Typography
+          variant="h5"
+          color="primary"
+          sx={{ mr: 2, fontWeight: 600 }}
+        >
           Binamite
         </Typography>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          News
-        </Typography>
-        <Button
-          variant="contained"
+        <Box
           sx={{
-            mr: 2,
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
           }}
         >
-          Signup for free
-        </Button>
-        <Button variant="contained">Login</Button>
+          <Button component="div" endIcon={<KeyboardArrowDownIcon />}>
+            Pricing
+          </Button>
+          <Button component="div" endIcon={<KeyboardArrowDownIcon />}>
+            Who it's for
+          </Button>
+          <Button component="div" endIcon={<KeyboardArrowDownIcon />}>
+            Features
+          </Button>
+          <Button component="div">Blog</Button>
+          <Button component="div">
+            <InstagramIcon />
+          </Button>
+          <Button component="div">
+            <FacebookOutlinedIcon />
+          </Button>
+        </Box>
+        <Box>
+          <Button
+            variant="contained"
+            sx={{
+              mr: 2,
+              fontWeight: 600,
+            }}
+          >
+            Signup for free
+          </Button>
+          <Button
+            variant="contained"
+            sx={{
+              fontWeight: 600,
+            }}
+            endIcon={<ArrowForwardOutlinedIcon />}
+          >
+            Login
+          </Button>
+        </Box>
       </Toolbar>
     </Box>
   );

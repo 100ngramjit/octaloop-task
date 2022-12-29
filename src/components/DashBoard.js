@@ -1,7 +1,13 @@
-import React from "react";
+import { styled, ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { lightTheme } from "../themes/customThemes";
+import DashboardSidebar from "./DashboardSidebar";
 
-const DashBoard = () => {
-  return <div>DashBoard</div>;
-};
-
-export default DashBoard;
+export default function DashBoard() {
+  return (
+    <ThemeProvider theme={lightTheme}>
+      <CssBaseline />
+      <DashboardSidebar />
+    </ThemeProvider>
+  );
+}
