@@ -1,16 +1,22 @@
-import { styled, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { lightTheme } from "../themes/customThemes";
 import DashboardSidebar from "./DashboardSidebar";
-import { Box } from "@mui/material";
+import { Box, Drawer } from "@mui/material";
+import DashBoardContent from "./DashBoardContent";
+
+const drawerWidth = 75;
 
 export default function DashBoard() {
   return (
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
-      <Box>
-        <DashboardSidebar />
-        Contractor Profile
+
+      <Box sx={{ display: "flex" }}>
+        <Drawer variant="permanent" sx={{ width: drawerWidth }}>
+          <DashboardSidebar />
+        </Drawer>
+        <DashBoardContent />
       </Box>
     </ThemeProvider>
   );
