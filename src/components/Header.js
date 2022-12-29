@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Toolbar>
-        <Typography variant="h5" color="#F5DF4D" sx={{ mr: 2 }}>
+        <Typography variant="h5" color="primary" sx={{ mr: 2 }}>
           Binamite
         </Typography>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -20,23 +20,11 @@ export default function Header() {
           variant="contained"
           sx={{
             mr: 2,
-            textTransform: "none",
-            background: "#F5DF4D",
-            borderRadius: "16px",
           }}
         >
           Signup for free
         </Button>
-        <Button
-          variant="contained"
-          sx={{
-            textTransform: "none",
-            background: "#F5DF4D",
-            borderRadius: "16px",
-          }}
-        >
-          Login
-        </Button>
+        <Button variant="contained">Login</Button>
       </Toolbar>
     </Box>
   );
