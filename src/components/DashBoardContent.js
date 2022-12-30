@@ -1,6 +1,15 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import { Box, Grid, Typography, Paper, Button } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Typography,
+  Paper,
+  Button,
+  Avatar,
+  Stack,
+  Chip,
+} from "@mui/material";
 import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -28,7 +37,7 @@ const DashBoardContent = ({ handleDrawerToggle }) => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
             >
               <Grid item xs={12}>
-                <Item elevation={0} variant="outlined" sx={{ height: "322px" }}>
+                <Item elevation={0} variant="outlined" sx={{ height: "300px" }}>
                   <Box
                     sx={{
                       display: "flex",
@@ -51,10 +60,50 @@ const DashBoardContent = ({ handleDrawerToggle }) => {
                       Manage
                     </Button>
                   </Box>
+                  <Grid container sx={{ mt: 2 }}>
+                    <Grid item xs={3}>
+                      <Avatar alt="John Doe" sx={{ height: 100, width: 100 }} />
+                    </Grid>
+                    <Grid item xs={9}>
+                      <Typography variant="caption" color="text.secondary">
+                        FULL NAME
+                      </Typography>
+                      <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                        Nikhil Bhintade
+                      </Typography>
+                      <Typography variant="caption" color="text.secondary">
+                        USERNAME
+                      </Typography>
+                      <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                        nikhilbhintade@octaloop.com
+                      </Typography>{" "}
+                      <Typography variant="caption" color="text.secondary">
+                        PHONE NUMBER
+                      </Typography>
+                      <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                        +91 94******435
+                      </Typography>{" "}
+                      <Typography variant="caption" color="text.secondary">
+                        FULL NAME
+                      </Typography>
+                      <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                        Nikhil Bhintade
+                      </Typography>
+                      <Typography variant="caption" color="text.secondary">
+                        EXPERTISE
+                      </Typography>
+                      <Stack direction="row" spacing={1}>
+                        <Chip label="graphic design" />
+                        <Chip label="visual design" />
+                        <Chip label="user research" />
+                        <Chip label="prototyping" />
+                      </Stack>
+                    </Grid>
+                  </Grid>
                 </Item>
               </Grid>
               <Grid item xs={12}>
-                <Item elevation={0} variant="outlined" sx={{ height: "160px" }}>
+                <Item elevation={0} variant="outlined" sx={{ height: "180px" }}>
                   <Box
                     sx={{
                       display: "flex",
