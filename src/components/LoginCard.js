@@ -18,19 +18,32 @@ import { lightTheme } from "../themes/customThemes";
 const LoginCard = () => {
   const [emailId, setEmailId] = useState("");
   const [userPassword, setUserPassword] = useState("");
+  const [data, setData] = useState({});
   const nav = useNavigate();
-
   const validateUser = async (e) => {
     e.preventDefault();
     nav("/dashboard");
-    // try {
-    //   const response = await axios.post("localhost:4000/signin", {
-    //     email: emailId,
-    //     password: userPassword,
-    //   });
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    try {
+      const response = await axios.post(
+        "http://localhost:4000/api/auth/signin",
+        {
+          email: emailId,
+          password: userPassword,
+        },
+        {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        },
+        {
+          withCredentials: true,
+        }
+      );
+      setData(response);
+    } catch (error) {
+      console.log(error);
+    }
   };
   //   useEffect(() => {
   //     const validateUser = async () => {
