@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -14,6 +15,7 @@ import icon5 from "../assets/item5.png";
 import icon6 from "../assets/item6.png";
 
 const DashboardSidebar = () => {
+  const nav = useNavigate();
   return (
     <Box
       sx={{
@@ -167,6 +169,9 @@ const DashboardSidebar = () => {
               minHeight: 48,
               justifyContent: "center",
               px: 2.5,
+            }}
+            onClick={() => {
+              nav("/");
             }}
           >
             <ListItemIcon
