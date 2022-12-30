@@ -8,8 +8,6 @@ const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   borderRadius: 14,
-  textAlign: "center",
-  color: theme.palette.text.secondary,
 }));
 
 const DashBoardContent = ({ handleDrawerToggle }) => {
@@ -35,7 +33,6 @@ const DashBoardContent = ({ handleDrawerToggle }) => {
                     sx={{
                       display: "flex",
                       justifyContent: "space-between",
-                      p: 1,
                     }}
                   >
                     <Typography
@@ -62,7 +59,6 @@ const DashBoardContent = ({ handleDrawerToggle }) => {
                     sx={{
                       display: "flex",
                       justifyContent: "space-between",
-                      p: 1,
                     }}
                   >
                     <Typography
@@ -81,6 +77,19 @@ const DashBoardContent = ({ handleDrawerToggle }) => {
                       Manage
                     </Button>
                   </Box>
+                  <Typography variant="caption" color="text.secondary">
+                    Time Zone
+                  </Typography>
+                  <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                    UTC+05:30 Mumbai, Kolkata, Chennai, New Delhi
+                  </Typography>
+                  <Typography variant="caption" color="text.secondary">
+                    Primary
+                  </Typography>
+                  <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                    A-83, Second Floor, Pocket D, Okhla Phase II, Okhla
+                    Industrial Estate, New Delhi, Delhi 110020
+                  </Typography>
                 </Item>
               </Grid>
             </Grid>
@@ -92,12 +101,11 @@ const DashBoardContent = ({ handleDrawerToggle }) => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
             >
               <Grid item xs={12}>
-                <Item elevation={0} variant="outlined" sx={{ height: "29vh" }}>
+                <Item elevation={0} variant="outlined" sx={{ height: "34vh" }}>
                   <Box
                     sx={{
                       display: "flex",
                       justifyContent: "space-between",
-                      p: 1,
                     }}
                   >
                     <Typography
@@ -108,15 +116,42 @@ const DashBoardContent = ({ handleDrawerToggle }) => {
                       Tax Identification (ID)
                     </Typography>
                   </Box>
+                  <Typography
+                    variant="caption"
+                    color="text.secondary"
+                    sx={{ py: 1 }}
+                    component="div"
+                  >
+                    A Primary Account Number (PAN) is requested from all
+                    companies located in India.
+                  </Typography>
+                  <Typography variant="caption" color="text.secondary">
+                    LEGAL TAXPAYER NAME
+                  </Typography>
+                  <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                    Octaloop Technologies Private Limited
+                  </Typography>
+                  <Typography variant="caption" color="text.secondary">
+                    PAN NUMBER
+                  </Typography>
+                  <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                    SFSFG8779B
+                  </Typography>
+                  <Typography variant="caption" color="error" component="div">
+                    *PAN Pending Verification
+                  </Typography>
+
+                  <Button variant="contained" color="secondary">
+                    Verify Now
+                  </Button>
                 </Item>
               </Grid>
               <Grid item xs={12}>
-                <Item elevation={0} variant="outlined" sx={{ height: "21vh" }}>
+                <Item elevation={0} variant="outlined" sx={{ height: "20vh" }}>
                   <Box
                     sx={{
                       display: "flex",
                       justifyContent: "space-between",
-                      p: 1,
                     }}
                   >
                     <Typography
@@ -127,15 +162,29 @@ const DashBoardContent = ({ handleDrawerToggle }) => {
                       GSTIN
                     </Typography>
                   </Box>
+                  <Typography
+                    variant="caption"
+                    color="text.secondary"
+                    component="div"
+                  >
+                    A Good & Services Tax Identification Number is requested
+                    from all persons located in country where Binamite Supports
+                    GSTIN.
+                  </Typography>
+                  <Typography variant="caption" color="text.secondary">
+                    GSTIN
+                  </Typography>
+                  <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                    356DFHSFSFG8779B
+                  </Typography>
                 </Item>
               </Grid>{" "}
               <Grid item xs={12}>
-                <Item elevation={0} variant="outlined" sx={{ height: "15vh" }}>
+                <Item elevation={0} variant="outlined" sx={{ height: "13vh" }}>
                   <Box
                     sx={{
                       display: "flex",
                       justifyContent: "space-between",
-                      p: 1,
                     }}
                   >
                     <Typography
@@ -146,15 +195,20 @@ const DashBoardContent = ({ handleDrawerToggle }) => {
                       W-8BEN
                     </Typography>
                   </Box>
+                  <Typography variant="caption" color="text.secondary">
+                    LEGAL TAXPAYER NAME
+                  </Typography>
+                  <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                    Octaloop Technologies Private Limited
+                  </Typography>
                 </Item>
               </Grid>{" "}
               <Grid item xs={12}>
-                <Item elevation={0} variant="outlined" sx={{ height: "15vh" }}>
+                <Item elevation={0} variant="outlined" sx={{ height: "13vh" }}>
                   <Box
                     sx={{
                       display: "flex",
                       justifyContent: "space-between",
-                      p: 1,
                     }}
                   >
                     <Typography
@@ -165,6 +219,12 @@ const DashBoardContent = ({ handleDrawerToggle }) => {
                       W-9
                     </Typography>
                   </Box>
+                  <Typography variant="caption" color="text.secondary">
+                    LEGAL TAXPAYER NAME
+                  </Typography>
+                  <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                    Octaloop Technologies Private Limited
+                  </Typography>
                 </Item>
               </Grid>
             </Grid>
