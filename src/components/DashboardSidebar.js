@@ -1,12 +1,10 @@
 import * as React from "react";
-import { styled } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
-import MuiDrawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import MailIcon from "@mui/icons-material/Mail";
 import { Avatar } from "@mui/material";
 import logo from "../assets/logo.png";
 import icon1 from "../assets/item1.png";
@@ -17,6 +15,7 @@ import icon5 from "../assets/item5.png";
 import icon6 from "../assets/item6.png";
 
 const DashboardSidebar = () => {
+  const nav = useNavigate();
   return (
     <Box
       sx={{
@@ -170,6 +169,9 @@ const DashboardSidebar = () => {
               minHeight: 48,
               justifyContent: "center",
               px: 2.5,
+            }}
+            onClick={() => {
+              nav("/");
             }}
           >
             <ListItemIcon
