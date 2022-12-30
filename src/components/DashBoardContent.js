@@ -1,14 +1,7 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import {
-  Box,
-  Grid,
-  Typography,
-  Paper,
-  CardHeader,
-  Avatar,
-  IconButton,
-} from "@mui/material";
+import { Box, Grid, Typography, Paper, Button } from "@mui/material";
+import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -19,7 +12,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const DashBoardContent = () => {
+const DashBoardContent = ({ handleDrawerToggle }) => {
   return (
     <Box
       component="main"
@@ -50,11 +43,16 @@ const DashBoardContent = () => {
                       sx={{ fontWeight: 600, pt: 0 }}
                       color="text.primary"
                     >
-                      Contractor Profile
+                      Profile
                     </Typography>
-                    <Typography variant="subtitle1" color="secondary">
+                    <Button
+                      color="secondary"
+                      size="small"
+                      onClick={handleDrawerToggle}
+                      startIcon={<BorderColorOutlinedIcon />}
+                    >
                       Manage
-                    </Typography>
+                    </Button>
                   </Box>
                 </Item>
               </Grid>
@@ -74,9 +72,14 @@ const DashBoardContent = () => {
                     >
                       Address Location
                     </Typography>
-                    <Typography variant="subtitle1" color="secondary">
+                    <Button
+                      color="secondary"
+                      size="small"
+                      onClick={handleDrawerToggle}
+                      startIcon={<BorderColorOutlinedIcon />}
+                    >
                       Manage
-                    </Typography>
+                    </Button>
                   </Box>
                 </Item>
               </Grid>
@@ -103,9 +106,6 @@ const DashBoardContent = () => {
                       color="text.primary"
                     >
                       Tax Identification (ID)
-                    </Typography>
-                    <Typography variant="subtitle1" color="secondary">
-                      Manage
                     </Typography>
                   </Box>
                 </Item>
@@ -169,16 +169,6 @@ const DashBoardContent = () => {
               </Grid>
             </Grid>
           </Grid>
-          {/* <Grid item xs={6}>
-          <Item elevation={0} variant="outlined" sx={{ height: "160px" }}>
-            3
-          </Item>
-        </Grid>
-        <Grid item xs={6}>
-          <Item elevation={0} variant="outlined">
-            4
-          </Item>
-        </Grid> */}
         </Grid>
       </Box>
     </Box>

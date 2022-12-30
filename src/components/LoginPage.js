@@ -13,8 +13,7 @@ import {
 import { ThemeProvider } from "@mui/material/styles";
 import GoogleIcon from "@mui/icons-material/Google";
 import Header from "./Header";
-import CssBaseline from "@mui/material/CssBaseline";
-import { darkTheme, lightTheme } from "../themes/customThemes";
+import { lightTheme } from "../themes/customThemes";
 
 const LoginPage = () => {
   return (
